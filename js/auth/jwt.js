@@ -1,6 +1,8 @@
+// Generate dummy jwt
 let generateJwt = (user, role) => {
     return btoa(
         JSON.stringify({
+            // Algorithm type would matter if encryption was used
             "alg": "HS256",
             "typ": "JWT"
         }))
@@ -16,6 +18,7 @@ let generateJwt = (user, role) => {
         }))        
 }
 
+// Read information contained inside jwt
 let readJwt = (jwt) => {
     return JSON.parse(
         atob(jwt.split('.')[1])

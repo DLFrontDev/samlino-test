@@ -4,7 +4,7 @@ import {renderError} from "./utility/create-error.js";
 const loginForm = document.querySelector('#login-form');
 const feedbackContainer = document.querySelector('#login-form .form-footer .feedback-container');
 
-loginForm && loginForm.addEventListener('submit', (event) => {
+const loginSubmit = (event) => {
     event.preventDefault();
     let user = event.target.querySelector("input[name='user']").value;
     let password = event.target.querySelector("input[name='password']").value;
@@ -21,4 +21,7 @@ loginForm && loginForm.addEventListener('submit', (event) => {
         feedbackContainer.classList.remove('loading');
         renderError(feedbackContainer, 'The provided login is invalid');
     })
-});
+}
+
+// Check for loginForm element existence and attach login submit logic
+loginForm && loginForm.addEventListener('submit', loginSubmit);

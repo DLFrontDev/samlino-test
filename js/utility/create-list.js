@@ -15,6 +15,7 @@ const createUserBlock = data => {
   let containerEl = createEl('div', 'info-container');
   let userDisplayData = ['name', 'username', 'email', 'phone', 'address'];
 
+  // Parse the data for the fields detailed on requirements 
   for (let field in data) {
     if (userDisplayData.includes(field)) {
       let fieldName = field;
@@ -31,6 +32,7 @@ const createUserBlock = data => {
           infoTextEl.innerHTML = fieldText.split(' ')[0];
           break;
         case 'address':
+          // Ensure address structure detailed by requirements
           infoTextEl.innerHTML = fieldText.street + ', ' + fieldText.suite + ', ' + fieldText.city + ' ' + fieldText.zipcode;
           break;
         default:

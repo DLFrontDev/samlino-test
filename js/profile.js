@@ -8,6 +8,7 @@ const logoutBtn = document.querySelector('#logout-button');
 const requestData = () => {
   let request = new XMLHttpRequest();
   const token = window.sessionStorage.getItem('token');
+  // Build target url after checking jwt role
   const targetUrl = 'https://jsonplaceholder.typicode.com/users' + (readJwt(token).role === 'user' ? '?id=' + Math.floor(Math.random() * 10 + 1) : '');
   userList.classList.add('loading');
 
@@ -18,6 +19,7 @@ const requestData = () => {
   }
 
   request.onreadystatechange = function() {
+    // Render userList when request is successful
     if (this.readyState == 4) {
       if (this.status == 200) {
           renderUserList(userList, JSON.parse(request.responseText));
@@ -43,4 +45,5 @@ const logout = () => {
 // Due to type="module" on script tag on profile.html, this function will always execute after DOM content is loaded
 requestData();
 
+// Check for logout button and attach logout event
 logoutBtn && logoutBtn.addEventListener('click', logout)

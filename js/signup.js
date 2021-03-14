@@ -4,7 +4,7 @@ import {renderError} from "./utility/create-error.js";
 const signupForm = document.querySelector('#signup-form');
 const feedbackContainer = document.querySelector('#signup-form .form-footer .feedback-container');
 
-signupForm && signupForm.addEventListener('submit', (event) => {
+const signupSubmit = (event) => {
     event.preventDefault();
     feedbackContainer.classList.add('loading');
     feedbackContainer.innerHTML = "";
@@ -18,4 +18,7 @@ signupForm && signupForm.addEventListener('submit', (event) => {
         feedbackContainer.classList.remove('loading');
         renderError(feedbackContainer, 'There was a problem while signing up, please try again');
     })
-});
+}
+
+// Check for loginForm element existence and attach signup submit logic
+signupForm && signupForm.addEventListener('submit', signupSubmit);
