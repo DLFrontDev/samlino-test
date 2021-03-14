@@ -1,10 +1,10 @@
 # samlino-test
 
 For the HTML structure I attempted to emulate the standard html flow:
-    element-container
-        element-title
-        element-body
-        element-footer
+* element-container
+    * element-title
+    * element-body
+    * element-footer
 
 SCSS files are separated by their function, in a more developed solution they would also be contained within relevant folders.
 As a rule, scss selectors should not have more than 3 levels.
