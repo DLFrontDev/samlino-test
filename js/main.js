@@ -4,5 +4,5 @@ if (!window.location.pathname.includes('profile') && window.sessionStorage.getIt
     window.location.replace(window.location.href + 'profile');
 } else if(window.location.pathname.includes('profile') && !window.sessionStorage.getItem('token')) {
     // Replace location with login page if profile page is accessed without login
-    window.location.replace(window.location.href.replace('profile', ''));
+    window.location.replace(window.location.origin + window.location.pathname.replace('profile', ''));
 }

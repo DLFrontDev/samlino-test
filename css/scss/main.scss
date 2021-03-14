@@ -1,8 +1,10 @@
-@use "fonts";
-@use "base";
+@import "colors";
+@import "fonts";
 
-@use "forms";
-@use "buttons";
+@import "base";
 
-@use "structural";
-@use "lists";
+@import "forms";
+@import "buttons";
+
+@import "structural";
+@import "lists";

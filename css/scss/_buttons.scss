@@ -1,0 +1,23 @@
+button {
+    font-family: 'Roboto';
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 700;
+    background: $grey;
+    color: white;
+    padding: 5px 20px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        background: $darkgrey;
+    }
+}

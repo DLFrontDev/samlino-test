@@ -11,14 +11,20 @@
 }
 
 .page-title {
+  margin-bottom: 30px;
+  
   .title-image {
     max-height: 50px;
   }
 
   h2, h3, h4, h5, h6 {
     font-size: 40px;
-    margin-top: 0;
+    margin: 0;
   }
+}
+
+.link-container {
+  margin: 10px 0;
 }
 
 .async-container {
