@@ -20,7 +20,7 @@ I used window.location.replace in order to prevent the pages from creating histo
 All functions pertaining to element creation are separated into modules dedicated to their specific functions.
 The abstraction for document.createElement was created to save lines and ease of development.
 
-Regarding the requested automated tests:
+###### Regarding the requested automated tests:
 I have had no experience with automated js testing, professional or otherwise.
 I attempted to configure jest testing but ran into issues regarding the use of ES6 modules
 Nevertheless, I tried to produce some tests according to the documentation, even though in some cases, the tests are clearly not going to work due to the structure not accounting for it
