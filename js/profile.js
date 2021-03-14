@@ -1,6 +1,6 @@
-import {renderError} from "/js/utility/createError.js";
-import {renderUserList} from "/js/utility/createList.js";
-import {readJwt} from "/js/auth/jwt.js";
+import {renderError} from "./utility/createError.js";
+import {renderUserList} from "./utility/createList.js";
+import {readJwt} from "./auth/jwt.js";
 
 const userList = document.querySelector('#user-list');
 const logoutBtn = document.querySelector('#logout-button');
