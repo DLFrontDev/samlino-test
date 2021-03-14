@@ -1,5 +1,5 @@
 import auth from "./auth/auth.js";
-import {renderError} from "./utility/create-error.js";
+import {createError} from "./utility/create-error.js";
 
 const signupForm = document.querySelector('#signup-form');
 const feedbackContainer = document.querySelector('#signup-form .form-footer .feedback-container');
@@ -16,7 +16,7 @@ const signupSubmit = (event) => {
     })
     .catch(() => {
         feedbackContainer.classList.remove('loading');
-        renderError(feedbackContainer, 'There was a problem while signing up, please try again');
+        feedbackContainer.appendChild(createError('There was a problem while signing up, please try again'));
     })
 }
 

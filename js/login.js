@@ -1,5 +1,5 @@
 import auth from "./auth/auth.js";
-import {renderError} from "./utility/create-error.js";
+import {createError} from "./utility/create-error.js";
 
 const loginForm = document.querySelector('#login-form');
 const feedbackContainer = document.querySelector('#login-form .form-footer .feedback-container');
@@ -19,7 +19,7 @@ const loginSubmit = (event) => {
     })
     .catch(() => {
         feedbackContainer.classList.remove('loading');
-        renderError(feedbackContainer, 'The provided login is invalid');
+        feedbackContainer.appendChild(createError('The provided login is invalid'));
     })
 }
 

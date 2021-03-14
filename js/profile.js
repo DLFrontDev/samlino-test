@@ -1,11 +1,12 @@
-import {renderError} from "./utility/create-error.js";
-import {renderUserList} from "./utility/create-list.js";
+import {createError} from "./utility/create-error.js";
+import {createUserList} from "./utility/create-list.js";
 import {readJwt} from "./auth/jwt.js";
 
 const userList = document.querySelector('#user-list');
 const logoutBtn = document.querySelector('#logout-button');
 
 const requestData = () => {
+  // This probably should be handled in a promise to be able to test
   let request = new XMLHttpRequest();
   const token = window.sessionStorage.getItem('token');
   // Build target url after checking jwt role
@@ -15,14 +16,14 @@ const requestData = () => {
   const handleError = (transaction) => {
     console.error("An error ocurred after the following transaction");
     console.dir(transaction || this);
-    renderError(userList, 'An error has ocurred, please try again later');
+    userList.appendChild(createError('An error has ocurred, please try again later'));
   }
 
   request.onreadystatechange = function() {
     // Render userList when request is successful
     if (this.readyState == 4) {
       if (this.status == 200) {
-          renderUserList(userList, JSON.parse(request.responseText));
+          userList.appendChild(createUserList(JSON.parse(request.responseText)));
       } else {
         handleError(this);
       }
@@ -38,6 +39,7 @@ const requestData = () => {
 }
 
 const logout = () => {
+  // Remove token from sessionStorage and replace current location with index area
   window.sessionStorage.removeItem('token');
   window.location.replace(window.location.origin + window.location.pathname.replace('login', ''));
 }

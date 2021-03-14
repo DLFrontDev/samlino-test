@@ -1,13 +1,13 @@
 import {createEl} from "./create-el.js";
 
-const renderUserList = (targetEl, data) => {
+const createUserList = (data) => {
     const rootEl = createEl('ul', 'list-container');  
     
     for (let user in data) {
         rootEl.appendChild(createUserBlock(data[user]));
     }
     
-    targetEl.appendChild(rootEl);
+    return rootEl;
 }
 
 const createUserBlock = data => {
@@ -48,4 +48,4 @@ const createUserBlock = data => {
   return rootEl;
 }
 
-export {renderUserList}
+export {createUserList}

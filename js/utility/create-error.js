@@ -1,11 +1,10 @@
 import {createEl} from "./create-el.js";
 
-const renderError = (targetEl, errorMessage) => {
+const createError = (errorMessage) => {
     let rootEl = createEl('p', 'error-message');
-  
     rootEl.innerHTML = errorMessage;
   
-    targetEl.appendChild(rootEl);
+    return rootEl;
 }
 
-export {renderError}
+export {createError}
