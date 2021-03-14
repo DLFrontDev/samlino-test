@@ -1,5 +1,5 @@
 import auth from "./auth/auth.js";
-import {renderError} from "./utility/createError.js";
+import {renderError} from "./utility/creat-error.js";
 
 const loginForm = document.querySelector('#login-form');
 const feedbackContainer = document.querySelector('#login-form .form-footer .feedback-container');

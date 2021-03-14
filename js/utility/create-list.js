@@ -1,4 +1,4 @@
-import {createEl} from "./createEl.js";
+import {createEl} from "./create-el.js";
 
 const renderUserList = (targetEl, data) => {
     const rootEl = createEl('ul', 'list-container');  

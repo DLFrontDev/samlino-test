@@ -1,5 +1,5 @@
-import {renderError} from "./utility/createError.js";
-import {renderUserList} from "./utility/createList.js";
+import {renderError} from "./utility/create-error.js";
+import {renderUserList} from "./utility/create-list.js";
 import {readJwt} from "./auth/jwt.js";
 
 const userList = document.querySelector('#user-list');
