@@ -9,6 +9,7 @@ loginForm && loginForm.addEventListener('submit', (event) => {
     let user = event.target.querySelector("input[name='user']").value;
     let password = event.target.querySelector("input[name='password']").value;
     feedbackContainer.classList.add('loading');
+    feedbackContainer.innerHTML = "";
 
     auth.login(user, password)
     .then((response) => {
@@ -18,7 +19,6 @@ loginForm && loginForm.addEventListener('submit', (event) => {
     })
     .catch(() => {
         feedbackContainer.classList.remove('loading');
-        feedbackContainer.innerHTML = "";
         renderError(feedbackContainer, 'The provided login is invalid');
     })
 });
