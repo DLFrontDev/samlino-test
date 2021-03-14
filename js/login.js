@@ -14,7 +14,7 @@ loginForm && loginForm.addEventListener('submit', (event) => {
     .then((response) => {
         feedbackContainer.classList.remove('loading');
         sessionStorage.setItem('token', response.jwt);
-        location.replace(window.location.origin + "/profile");
+        location.replace(window.location.href + "profile");
     })
     .catch(() => {
         feedbackContainer.classList.remove('loading');

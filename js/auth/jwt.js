@@ -10,7 +10,7 @@ let generateJwt = (user, role) => {
             "iss": "Samlino Test",
             "iat": new Date().getTime(),
             "exp": new Date().setHours(new Date().getHours() + 1),
-            "aud": window.location.origin,
+            "aud": window.location.href,
             "sub": user,
             "role": role
         }))        

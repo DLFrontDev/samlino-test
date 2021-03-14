@@ -37,7 +37,7 @@ const requestData = () => {
 
 const logout = () => {
   window.sessionStorage.removeItem('token');
-  window.location.replace(window.location.origin);
+  window.location.replace(window.location.href);
 }
 
 // Due to type="module" on script tag on profile.html, this function will always execute after DOM content is loaded
