@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    font-family: 'Roboto';
+    background-color: lightgrey;
+}
+
+// Normalize element box-sizing
+*, *:after, *:before {
+    box-sizing: border-box;
+}

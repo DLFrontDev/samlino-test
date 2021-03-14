@@ -1,0 +1,39 @@
+.page-container,
+.footer-container {
+  max-width: 1024px;
+  padding: 20px 16px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.footer-container {
+  padding: 20px 16px 10px;
+}
+
+.page-title {
+  .title-image {
+    max-height: 50px;
+  }
+
+  h2, h3, h4, h5, h6 {
+    font-size: 40px;
+    margin-top: 0;
+  }
+}
+
+.async-container {
+  &:after {
+    display: block;
+    margin-top: 16px;
+  }
+
+  &.loading:after {
+    content: 'Loading now... Please wait';
+  }
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 16px;
+}

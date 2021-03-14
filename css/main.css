@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+body {
+  margin: 0;
+  font-family: "Roboto";
+  background-color: lightgrey;
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+form {
+  margin: 0;
+}
+form .form-body {
+  display: flex;
+  flex-direction: column;
+}
+form .form-body .form-group label {
+  display: block;
+}
+form .form-body .form-group + .form-group {
+  margin-top: 10px;
+}
+form .form-footer {
+  margin-top: 20px;
+}
+
+input {
+  height: 40px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding: 10px 20px;
+}
+input:focus {
+  outline: none;
+  border-color: black;
+}
+
+.page-container,
+.footer-container {
+  max-width: 1024px;
+  padding: 20px 16px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.footer-container {
+  padding: 20px 16px 10px;
+}
+
+.page-title .title-image {
+  max-height: 50px;
+}
+.page-title h2, .page-title h3, .page-title h4, .page-title h5, .page-title h6 {
+  font-size: 40px;
+  margin-top: 0;
+}
+
+.async-container:after {
+  display: block;
+  margin-top: 16px;
+}
+.async-container.loading:after {
+  content: "Loading now... Please wait";
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 16px;
+}
+
+ul.list-container {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  grid-auto-flow: row;
+}
+@media screen and (min-width: 601px) {
+  ul.list-container {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+  }
+}
+
+.info-container {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+  height: 100%;
+  background-color: white;
+  box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.3);
+}
+.info-container .info-line {
+  display: flex;
+  flex-direction: row;
+}
+.info-container .info-line:not(:last-child) {
+  margin-bottom: 10px;
+}
+.info-container .info-line .info-title,
+.info-container .info-line .info-text {
+  padding: 0 5px;
+}
+.info-container .info-line .info-title {
+  flex-basis: 30%;
+  text-align: right;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.info-container .info-line .info-text {
+  flex-grow: 1;
+}
+
+/*# sourceMappingURL=main.css.map */
